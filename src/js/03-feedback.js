@@ -33,7 +33,11 @@ function fillForm() {
     e.preventDefault();
   
     console.log(parsedData);
-
+    // if (formRefs.value === ''){
+      window.alert("Ти даун")
+    // } else{
     e.currentTarget.reset();
     localStorage.removeItem('feedback-form-state');
+    // }
   }
+ 
