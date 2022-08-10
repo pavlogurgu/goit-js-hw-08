@@ -1,10 +1,8 @@
-
 import throttle from 'lodash.throttle';
 
 const form = document.querySelector('.feedback-form');
 const email = document.querySelector('input[name="email"]');
 const message = document.querySelector('textarea');
-
 const LOCALSTORAGE_KEY = 'feedback-form-state';
 
 form.addEventListener('input', throttle(saveInputMessage, 500));
@@ -21,7 +19,6 @@ function saveInputMessage(event) {
     console.error('error: ', error.message);
   }
 }
-
 
 function submitMessage(event) {
   event.preventDefault();
@@ -49,4 +46,5 @@ function savedForm() {
     console.error('error: ', error.message);
   }
 }
+
 savedForm();
